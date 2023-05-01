@@ -1,0 +1,51 @@
+---
+sidebar_label: Python
+description: Create a doc page with rich content.
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import DocCardList from '@theme/DocCardList';
+
+## 虚拟环境 Venv
+Python虚拟环境（Virtual Environment）是一种独立的Python环境，可以在其中安装和管理不同版本的Python和Python包。
+
+Python 从3.3 版本开始，自带了一个虚拟环境 venv(之前是用 virtualenv)，个人觉得使用很方便。
+
+<Tabs>
+  <TabItem value="Linux" label="Linux 和 macOS" default>
+
+```bash
+# 创建
+$ python3 -m venv env
+# 激活
+$ . env/bin/activate
+# 成功激活
+(env) $
+# 退出
+(env) $ deactivate
+$
+```
+  </TabItem>
+  <TabItem value="Windows" label="Windows">
+
+```bash
+# 创建
+$ python -m venv env
+# 激活
+$ env\Scripts\activate
+# 成功激活
+(env) $
+# 退出
+(env) $ deactivate
+$
+```
+  </TabItem>
+</Tabs>
+
+> 最后一个参数 env 是虚拟环境名称，可以自由定义
+
+## 书单
+- [x] [编程小白的第一本 Python 入门书](https://www.ituring.com.cn/book/1863) 最开始入门python看的一本书
+- [ ] [流畅的Python](https://book.douban.com/subject/27028517/) 豆瓣评分9.4，有[第2版](https://book.douban.com/subject/36342440/)，适合进阶
+
+<DocCardList />

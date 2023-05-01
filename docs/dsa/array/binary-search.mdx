@@ -1,0 +1,64 @@
+---
+sidebar_label: Binary Search 
+# description: Create a doc page with rich content.
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# 二分查找(Binary Search)
+
+二分查找（Binary Search）是一种在有序数组中查找某一特定元素的查找算法。
+其基本思想是：将数组从中间切分成两部分，如果待查找元素小于中间元素，则在左半部分继续查找，
+否则在右半部分查找，直到找到该元素或查找区间为空。
+
+二分查找的时间复杂度为O(log n)，相比于线性查找的O(n)，它的效率更高。但是，二分查找只适用于有序数组，
+如果数组无序，需要先进行排序操作。
+
+[35. 搜索插入位置](https://leetcode.cn/problems/search-insert-position/)
+> 给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，
+返回它将会被按顺序插入的位置。
+请必须使用时间复杂度为 O(log n) 的算法。
+
+
+<Tabs>
+  <TabItem value="java" label="Java" default>
+
+```java
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        // 二分查找
+        int left = 0;
+        int right = nums.length -1;
+        int ans = nums.length;
+        
+        while(left <= right) { // 区间 [L, R]
+            int mid = (right - left) / 2 + left;
+            if ( target <= nums[mid] ) {
+                ans = mid;
+                right = mid -1;
+            } else {
+                left = mid +1;
+            }
+        }
+        return ans;
+    }
+}
+```
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+```python
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        low, high, ans = 0, len(nums) -1, len(nums)
+        while low <= high:
+            mid = (high - low)//2 + low
+            if target <= nums[mid]:
+                ans = mid
+                high = mid -1
+            else: 
+                low = mid + 1
+        return ans
+```
+  </TabItem>
+</Tabs>

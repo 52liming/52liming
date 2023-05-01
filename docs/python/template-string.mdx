@@ -1,0 +1,33 @@
+---
+sidebar_label: Template String 
+# description: 
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Template String
+
+<Tabs>
+  <TabItem value="python3.6" label="Python3.6+" default>
+
+```python
+name = 'world'
+f'hello {name}'
+```
+  </TabItem>
+  <TabItem value="python3" label="Python3" default>
+
+```python
+name = 'world'
+'hello {}'.format(name)
+'hello {name}, are you {age} years old?'.format(name='ming', age=18)
+```
+  </TabItem>
+  <TabItem value="python2" label="Python2" default>
+
+```python
+name = 'world'
+'hello %s' % name
+```
+  </TabItem>
+</Tabs>
