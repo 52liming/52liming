@@ -17,11 +17,11 @@ const Base64Decoder = ({ text }) => {
 
 const ContactMe = () => {
   return (
-    <p>
+    <div>
       <span>联系我(点击查看)</span>
       <div><b>Wechat：</b><Base64Decoder text={"Z290bzEyMzIx"} /> </div>
       <div><b>Email：</b><Base64Decoder text={"YWRtaW5ANTJsaW1pbmcuY29t"} /> </div>
-    </p>
+    </div>
   );
 };
 
