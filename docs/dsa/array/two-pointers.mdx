@@ -1,6 +1,6 @@
 ---
 sidebar_label: Two Pointers 
-#description: Create a doc page with rich content.
+description: 双指针算法（Two Pointers Algorithm）是指在数组或链表等数据结构上，使用两个指针分别从两端或中间开始向中间或另一端移动，以达到查找、遍历、求解等操作的算法。
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -16,6 +16,9 @@ import TabItem from '@theme/TabItem';
 > 
 > 注意：最终，合并后数组不应由函数返回，而是存储在数组 nums1 中。为了应对这种情况，nums1 的初始长度为 m + n，其中前 m 个元素表示应合并的元素，后 n 个元素为 0 ，应忽略。nums2 的长度为 n 。
 
+重点：nums1和nums2已经被排序
+
+![tow](https://assets.leetcode-cn.com/solution-static/88/1.gif)
 
 <Tabs>
   <TabItem value="java" label="Java" default>
@@ -27,6 +30,7 @@ class Solution {
 
         int p1 = 0, p2 =0;
         int[] sorted = new int[m +n];
+        // current 当前值
         int cur;
         while (p1 < m || p2 < n) {
             // nums1中的有序元素已经全部被遍历完，只能取nums2中的元素，例如nums1 = []
@@ -45,11 +49,38 @@ class Solution {
             // 最后将cur赋值给sorted[p1+p2-1]，即将cur放入合并后的有序数组中
             sorted[p1 + p2 - 1] = cur;
         }
+        // 最后合并（保存）到 nums1 中
         for (int i = 0; i != m + n; ++i) {
             nums1[i] = sorted[i];
         }
     }
 }
+```
+  </TabItem>
+  <TabItem value="python" label="Python" >
+
+```python
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        sorted = []
+        p1, p2 = 0, 0
+        while p1 < m or p2 < n:
+            if p1 == m:
+                sorted.append(nums2[p2])
+                p2 += 1
+            elif p2 == n:
+                sorted.append(nums1[p1])
+                p1 += 1
+            elif nums1[p1] < nums2[p2]:
+                sorted.append(nums1[p1])
+                p1 += 1
+            else:
+                sorted.append(nums2[p2])
+                p2 += 1
+        nums1[:] = sorted
 ```
   </TabItem>
 </Tabs>
