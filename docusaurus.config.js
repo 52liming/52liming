@@ -104,7 +104,11 @@ const config = {
           { type: 'doc', docId: 'intro', position: 'right', label: 'Docs', },
           { to: '/resource', label: 'Resource', position: 'right',},
           { to: '/blog', label: 'Blog', position: 'right' },
-          { to: '/ChatGPT', label: 'ChatGPT', position: 'right' },
+          { type: 'dropdown', label: 'Project', position: 'right',
+           items: [
+            { to: '/eat', label: 'WhatEat'},
+            { to: '/ChatGPT', label: 'ChatGPT'},
+          ]}
         ],
       },
       footer: {
