@@ -101,9 +101,10 @@ const config = {
           src: 'img/logo_32x32.png',
         },
         items: [
+          { to: '/blog', label: '推荐', position: 'right' },
           { type: 'doc', docId: 'intro', position: 'right', label: 'Docs', },
           { to: '/resource', label: 'Resource', position: 'right',},
-          { to: '/blog', label: 'Blog', position: 'right' },
+          { href: 'https://52liming.cnblogs.com/', label: 'Blog', position: 'right' },
           { type: 'dropdown', label: 'Project', position: 'right',
            items: [
             { to: '/eat', label: 'WhatEat'},
