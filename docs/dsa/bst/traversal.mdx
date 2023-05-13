@@ -1,0 +1,75 @@
+---
+sidebar_label: Traversal
+# description: Create a doc page with rich content.
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# 遍历
+
+## Preorder Traversal（前序遍历）
+[108. 将有序数组转换为二叉搜索树](https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/)
+> 给你一个整数数组 nums ，其中元素已经按 升序 排列，请你将其转换为一棵 高度平衡 二叉搜索树。
+> 高度平衡 二叉树是一棵满足「每个节点的左右两个子树的高度差的绝对值不超过 1 」的二叉树。
+
+
+<Tabs>
+  <TabItem value="java" label="Java" default>
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public TreeNode sortedArrayToBST(int[] nums) {
+        // 前序遍历，选左边数字为根节点
+        // 使用递归
+        // 根节点 mid = （left + right)/2
+        return helper(nums, 0, nums.length - 1);
+        
+    }
+
+    public TreeNode helper(int[] nums, int left, int right) {
+        if (left > right) {
+            return null;
+        }
+        // 选左边
+        int mid = (left + right) / 2;
+        // or选右边
+        // int mid = (left + right + 1) / 2;
+				// 使用中间值作为头值，这样才能创造高度平衡树
+        TreeNode root = new TreeNode(nums[mid]);
+        root.left = helper(nums, left, mid -1);
+        root.right = helper(nums, mid + 1, right);
+        return root;
+    }
+}
+```
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+```python
+
+```
+  </TabItem>
+</Tabs>
+
+* 1 <= nums.length <= 104   （这个条件是防止数组过大导致求mid越界异常）
+* -104 <= nums[i] <= 104
+* nums 按 严格递增 顺序排列
+
+## Inorder Traversal（中序遍历）
+
+## Postorder Traversal (后序遍历)
