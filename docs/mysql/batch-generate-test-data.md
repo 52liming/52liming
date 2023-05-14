@@ -1,5 +1,5 @@
 ---
-sidebar_label: MySQL
+sidebar_label: 批量生成测试数据 
 ---
 # 批量生成测试数据
 
