@@ -109,7 +109,13 @@ const config = {
            items: [
             { to: '/eat', label: 'WhatEat'},
             { to: '/ChatGPT', label: 'ChatGPT'},
-          ]}
+          ]},
+          {
+            href: 'https://github.com/52liming/52liming',
+            position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub 仓库',
+          },
         ],
       },
       footer: {
