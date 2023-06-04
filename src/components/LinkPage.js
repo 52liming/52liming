@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import styles from './LinkPage.module.css';
+import clsx from 'clsx';
 
 export default function LinkPage(props) {
   const [links, setLinks] = useState(props.links);
@@ -30,22 +32,11 @@ export default function LinkPage(props) {
   };
 
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <div className={styles.wrapper}>
       {links.map((link, index) => (
         <div
           key={link.name}
-          style={{
-            display: 'flex',
-						justifyContent: 'center',
-            width: '100%',
-            alignItems: 'center',
-            backgroundColor: 'var(--ifm-pills-color-background-active)', //'rgba(0, 0, 0, 0.05)',
-            borderRadius: '50px',
-            margin: '10px',
-            padding: '8px',
-            cursor: 'pointer',
-            transform: link.hovered ? 'scale(1.05)' : 'none',
-          }}
+          className={clsx(styles.wrapperItem, { [styles.itemHovered]: link.hovered })}
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={() => handleMouseLeave(index)}
           onClick={() => handleClick(link)}
@@ -53,18 +44,10 @@ export default function LinkPage(props) {
           <img
             src={link.imgSrc}
             alt={link.name}
-            style={{ width: '40px', height: '40px', borderRadius: '20px' }}
+            className={styles.img}
           />
-          <div style={{
-						width: '100%',
-						textAlign: 'center',
-						marginLeft: '10px auto',
-						fontWeight: 'var(--ifm-font-weight-bold)',
-						color: 'var(--ifm-link-color)',
-						textDecoration: 'var(--ifm-link-decoration)',
-						transition: 'color var(--ifm-transition-fast) var(--ifm-transition-timing-default)',
-					}}>{link.name}</div>
-          <div style={{ marginLeft: 'auto', marginRight: '25px' }}>></div>
+          <div className={styles.name}>{link.name}</div>
+          <div className={styles.symbol} style={{}}>></div>
         </div>
       ))}
     </div>

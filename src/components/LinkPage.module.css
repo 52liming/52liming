@@ -1,0 +1,41 @@
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.wrapperItem {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+	background-color: var(--ifm-pills-color-background-active); 
+	border-radius: 50px;
+	margin: 10px;
+	padding: 8px;
+	cursor: pointer;
+}
+
+.itemHovered {
+	transform: scale(1.05);
+}
+
+.img {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+}
+
+.name {
+	width: 100%;
+	text-align: center;
+	margin-left: 10px auto;
+	font-weight: var(--ifm-font-weight-bold);
+	color: var(--ifm-link-color);
+	text-decoration: var(--ifm-link-decoration);
+	transition: color var(--ifm-transition-fast) var(--ifm-transition-timing-default);	
+}
+
+.symbol {
+  margin-left: auto;
+  margin-right: 25px;
+}
