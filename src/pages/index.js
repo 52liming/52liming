@@ -11,7 +11,6 @@ function HomePageMain() {
   const {title, tagline} = siteConfig
   const {links} = siteConfig.customFields
   return(
-    // <div className={clsx('container ', styles.container)}>
     <div className={clsx('row', styles.container)}> 
       <div className='col col--8'>
         <div style={{textAlign: 'center'}}>
