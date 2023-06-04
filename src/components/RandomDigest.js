@@ -19,7 +19,7 @@ const digests = [
 export default function RandomDigest(){
 	const index = Math.floor((Math.random() * digests.length));
 	return (
-		<div style={{fontStyle: 'italic', opacity: 0.6}}>
+		<div style={{fontStyle: 'italic', opacity: 0.6, justifyContent: 'center', textAlign: 'center'}}>
 			{digests[index]}
 		</div> 
 	)

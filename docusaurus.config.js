@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '李鸣',
-  tagline: 'Study・Record・Share',
+  tagline: 'Study・Record・Share    ',
   url: 'https://www.52liming.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -133,6 +133,41 @@ const config = {
         additionalLanguages: ['java'],
       },
     }),
+  customFields:{
+    // 个人链接
+    links: [
+      {
+        name: '博客园',
+        link: 'https://52liming.cnblogs.com/',
+        imgSrc: '/img/links/cnblogs.png',
+      },
+      {
+        link: 'https://gitee.com/forxiaoming',
+        name: 'Gitee',
+        imgSrc: '/img/links/gitee.png',
+      },
+      {
+        link: 'https://stackoverflow.com/users/11966119/xiaoming',
+        name: 'StackOverflow',
+        imgSrc: 'img/links/stackoverflow.png',
+      },
+      {
+        link: 'https://segmentfault.com/u/52liming',
+        name: 'SegmentFault 思否',
+        imgSrc: '/img/links/sf.png',
+      },
+      {
+        link: 'https://space.bilibili.com/211909658',
+        name: '哔哩哔哩',
+        imgSrc: '/img/links/bilibili.png',
+      },
+      {
+        link: '/shop',
+        name: '微信小商店',
+        imgSrc: '/img/logo_32x32.png',
+      }
+    ]
+  }
 };
 
 module.exports = config;
