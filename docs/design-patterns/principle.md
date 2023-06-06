@@ -7,8 +7,7 @@ description: 6大设计原则：单一职责、里氏替换原则 、依赖倒�
 
 设计原则只是参考，并非一定要完全符合规则，需要在实际开发中权衡
 
-仓库地址：[/my-java-guide/tree/master/design-pattern](https://gitee.com/forxiaoming/my-java-guide/tree/master/design-pattern)
-
+仓库地址：[/forxiaoming/design-pattern](https://gitee.com/forxiaoming/design-pattern)
 ## Single Responsibility Principle,SRP
 1. 单一职责提出一个写程序的标准, 用"职责" 或 "变化原因" 类衡量接口或类设计得是否优良
 2. 建议接口一定要做到单一职责, 类得设计尽量做到只有一个原因引起变化
