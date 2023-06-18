@@ -1,0 +1,28 @@
+---
+sidebar_label: J4125
+description: J425小主机,x86
+---
+
+# 畅网微控 X86-P2 J4125
+
+![x](/img/docs/mini-pc/j4125_1.JPG)
+
+## Iterl i226-V 2.5G网卡驱动
+
+这款网卡驱动 Windows 下官方只有 Win10 和 Win11 驱动；而畅网微控官方资料提供的是 Win11 的驱动，
+这也是我在 Win10 下安装几次都没成功的原因。
+
+微软官方驱动下载地址：
+
+https://www.intel.cn/content/www/cn/zh/support/articles/000055236/ethernet-products/gigabit-ethernet-controllers-up-to-2-5gbe.html
+
+由于我的Unraid 从6.9.2升级到了6.11.5，已经支持这款网卡驱动，就不用自己折腾了
+（6.9.2默认是不支持的，可以自己编译，油管有教程）
+## 内存
+
+看到网上说J4125比较挑内存，需要1G单颗粒的才行，结果我正好有两条光威16G内存，一条是DDR4 2666 1.2v 1G单颗粒，
+结果无法启动，另一条是 DDR4 2666 SO-DIMM 1.2v 可以正常启动，看畅网介绍是 SO-DIMM DDR4 2400
+
+## 风扇
+
+没注意买大了，买的利民12cm的（实际主板才90*90），不过确实挺静音，风量吹上去也完全足够
