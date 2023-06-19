@@ -1,6 +1,6 @@
 ---
 sidebar_label: Unraid 
-description: Unraid 释放你的硬件,支持Docker+虚拟机+文件共享
+description: Unraid 解放你的硬件,支持Docker+虚拟机+文件共享
 ---
 # Unraid
 
@@ -10,9 +10,57 @@ description: Unraid 释放你的硬件,支持Docker+虚拟机+文件共享
 
 
 ## 安装
+### 中文语言包
 
-## Docker
+[CA APP商店及中文语言包的国内镜像](https://forums.unraid.net/topic/105749-ca-app%E5%95%86%E5%BA%97%E5%8F%8A%E4%B8%AD%E6%96%87%E8%AF%AD%E8%A8%80%E5%8C%85%E7%9A%84%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F/?tab=comments#comment-976540&searchlight=1)
+> 每天凌晨5点自动同步到Gitee并自动更改链接为Gitee项目地址，可直接安装使用
+>
+> Community Applications  
+> [GitHub原项目地址](https://github.com/Squidly271/community.applications) | [Gitee项目地址](https://gitee.com/ouiae/community.applications)  
+> 插件链接 
+> ```https://gitee.com/ouiae/community.applications/raw/master/plugins/community.applications.plg```  
+> 官方简体中文语言包     
+> [GitHub原项目地址](https://github.com/unraid/language-templates) | [Gitee项目地址](https://gitee.com/ouiae/language-templates)  
+> 插件链接  
+> ```https://gitee.com/ouiae/language-templates/raw/master/limetech/lang-zh_CN.xml```
 
-## 虚拟机
+### Docker 镜像加速
 
-### 显卡直通
+https://docker.mirrors.ustc.edu.cn
+
+https://mirror.baidubce.com 
+
+使用阿里云镜像加速
+
+1. 进入阿里云 https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors 获取镜像加速地址 ```https://xxx.mirror.aliyuncs.com```
+2. 进入unraid Terminal后台，输入
+```bash
+mkdir -p /etc/docker
+tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://xxx.mirror.aliyuncs.com"]
+}
+EOF
+```
+3. 使每次重启后依然生效 `vi /boot/config/go`
+```bash
+tee /etc/docker/daemon.json <<-'EOF'
+{
+"registry-mirrors": ["https://xxx.mirror.aliyuncs.com"]
+}
+EOF
+```
+4. 重启docker `/etc/rc.d/rc.docker restart`
+
+## 虚拟机网卡驱动
+
+安装虚拟机后，需要进入虚拟机添加网卡驱动才可接入网络  
+参考：https://kui.li/152.html
+
+## 问题记录
+
+### Docker启动报错
+
+简单处理方法：尝试把docker设置——关闭docker——磁盘大小增加——重启unraid——启用docker
+
+来源：[关于DOCKER无法启动的问题](https://forums.unraid.net/topic/97717-%E5%85%B3%E4%BA%8Edocker%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84%E9%97%AE%E9%A2%98/)
