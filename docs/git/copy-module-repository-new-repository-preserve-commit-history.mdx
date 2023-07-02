@@ -115,4 +115,20 @@ git branch -d dp
 git push origin --delete dp
 ```
 
+13. 删除步骤2中的新远程仓库`dp_orign`
+```shell
+git branch -a
+* master
+  remotes/dp_orign/dp
+  remotes/dp_orign/master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+git remote rm dp_orign
+
+git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+```
+
 这样就完成了将一个仓库中的某个模块复制到另一个仓库中，并且保留了提交记录的操作。

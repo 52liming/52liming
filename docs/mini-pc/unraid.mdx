@@ -4,10 +4,20 @@ description: Unraid 解放你的硬件,支持Docker+虚拟机+文件共享
 ---
 # Unraid
 
+## 插件
+### unbalance
+
+unBALANCE 是一个用于在阵列中的磁盘之间传输文件/文件夹的插件。
+
+https://forums.unraid.net/topic/43651-plug-in-unbalance/
+
 ## 问题记录
 
 ### Docker启动报错
 
+简单处理方法：尝试把docker设置——关闭docker——磁盘大小增加——重启unraid——启用docker
+
+来源：[关于DOCKER无法启动的问题](https://forums.unraid.net/topic/97717-%E5%85%B3%E4%BA%8Edocker%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84%E9%97%AE%E9%A2%98/)
 
 ## 安装
 ### 中文语言包
@@ -56,11 +66,3 @@ EOF
 
 安装虚拟机后，需要进入虚拟机添加网卡驱动才可接入网络  
 参考：https://kui.li/152.html
-
-## 问题记录
-
-### Docker启动报错
-
-简单处理方法：尝试把docker设置——关闭docker——磁盘大小增加——重启unraid——启用docker
-
-来源：[关于DOCKER无法启动的问题](https://forums.unraid.net/topic/97717-%E5%85%B3%E4%BA%8Edocker%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84%E9%97%AE%E9%A2%98/)
