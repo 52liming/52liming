@@ -1,5 +1,6 @@
 ---
 sidebar_label: （一）命名风格
+sidebar_position: 1 
 ---
 # 命名风格
 1. <span style={{color: 'red',fontWeight: 'bold'}}>【强制】</span>所有编程相关的命名均不能以<span style={{color: 'blue'}}>下划线或美元符号</span>开始，也不能以下<span style={{color: 'blue'}}>下划线或美元符号</span>结束。 
