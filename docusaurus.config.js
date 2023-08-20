@@ -125,7 +125,7 @@ const config = {
             html: '<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次（by不蒜子）</span>'
           }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} 李鸣. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} 李鸣. Built with <a href="https://docusaurus.io/">Docusaurus</a>. Deployed by <a href="https://www.netlify.com/">Netlify</a>.`,
       },
       prism: {
         theme: lightCodeTheme,

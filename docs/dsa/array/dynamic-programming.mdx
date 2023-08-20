@@ -1,0 +1,96 @@
+---
+sidebar_label: Dynamic Programming
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# 动态规划(Dynamic Programming, DP)
+
+动态规划（英语：Dynamic programming，简称DP）通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法。
+
+动态规划常常适用于有重叠子问题和最优子结构性质的问题，动态规划方法所耗时间往往远少于朴素解法。
+
+动态规划背后的基本思想非常简单。大致上，若要解一个给定问题，我们需要解其不同部分（即子问题），再根据子问题的解以得出原问题的解。
+
+通常许多子问题非常相似，为此动态规划法试图仅仅解决每个子问题一次，从而减少计算量：一旦某个给定子问题的解已经算出，则将其记忆化存储，以便下次需要同一个子问题解之时直接查表。这种做法在重复子问题的数目关于输入的规模呈指数增长时特别有用。
+
+[121. 买卖股票的最佳时机](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/)
+
+> You are given an array prices where prices[i] is the price of a given stock on the ith day.
+> You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+> Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+
+<Tabs>
+  <TabItem value="java" label="Java" default>
+
+```java
+/**
+ * 给定一个数组prices，其中prices[i]表示第i天的股票价格，
+ * 要求找到买入和卖出的最佳时机，使得利润最大化，
+ * 返回最大利润。
+ */
+class Solution {
+    public int maxProfit(int[] prices) {
+        // 初始化最低价格为整数的最大值
+        int minPrice = Integer.MAX_VALUE;
+        // 初始化最大利润为0
+        int maxProfit = 0;
+        // 遍历数组中的每个价格
+        for (int price : prices) {
+            // 如果当前价格小于最低价格，则更新最低价格
+            if (price < minPrice) {
+                minPrice = price;
+            } 
+            // 如果当前价格减去最低价格大于最大利润，则更新最大利润
+            else if ((price - minPrice) > maxProfit) {
+                maxProfit = price - minPrice;
+            }
+        }
+        // 返回最大利润
+        return maxProfit;
+    }
+}
+```
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+```python
+"""
+给定一个数组prices，其中prices[i]表示第i天的股票价格，
+要求找到买入和卖出的最佳时机，使得利润最大化，
+返回最大利润。
+
+参数：
+- prices: 股票价格数组
+
+返回值：
+- 最大利润
+
+思路：
+- 初始化最低价格为数组中的最大值
+- 初始化最大利润为0
+- 遍历数组中的每个价格
+    - 如果当前价格小于最低价格，则更新最低价格
+    - 如果当前价格减去最低价格大于最大利润，则更新最大利润
+- 返回最大利润
+"""
+
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        # 初始化最低价格为数组中的最大值
+        min_price = max(prices)
+        # 初始化最大利润为0
+        max_profit = 0
+        # 遍历数组中的每个价格
+        for p in prices:
+            # 如果当前价格减去最低价格大于最大利润，则更新最大利润
+            max_profit = max(p - min_price, max_profit)
+            # 如果当前价格小于最低价格，则更新最低价格
+            min_price = min(p, min_price)
+        # 返回最大利润
+        return max_profit
+```
+  </TabItem>
+</Tabs>
