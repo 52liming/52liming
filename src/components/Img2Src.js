@@ -5,7 +5,7 @@ const Img2Src = ({ src, alt, cdnFlag = true }) => {
   const [imgSrc, setImgSrc] = useState(() => cdnFlag ? cdnSrc : src);
   
   const handleImageError = () => {
-    // 如果cnd 不能访问 则从本地访问
+    // 如果CDN 不能访问 则从本地访问
     setImgSrc(src);
   };
 
