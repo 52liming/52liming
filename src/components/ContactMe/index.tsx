@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const Base64Decoder = ({ text }) => {
-  const [decodedText, setDecodedText] = useState("");
+const Base64Decoder: React.FC<{text: string}> = ({ text }) => {
+  const [decodedText, setDecodedText] = useState<string>("");
 
-  const handleClick = () => {
-    const decoded = atob(text);
+  const handleClick = (): void => {
+    const decoded: string = window.atob(text);
     setDecodedText(decoded);
   };
 
