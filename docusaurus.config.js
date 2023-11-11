@@ -102,9 +102,9 @@ const config = {
         },
         items: [
           { to: '/blog', label: '推荐', position: 'right' },
-          { type: 'doc', docId: 'intro', position: 'right', label: 'Docs', },
-          { to: '/resource', label: 'Resource', position: 'right',},
-          { href: 'https://52liming.cnblogs.com/', label: 'Blog', position: 'right' },
+          { type: 'doc', docId: 'intro', position: 'right', label: '文档', },
+          { to: '/resource', label: '资源', position: 'right',},
+          { href: 'https://52liming.cnblogs.com/', label: '博客', position: 'right' },
           { type: 'dropdown', label: 'Project', position: 'right',
            items: [
             { to: '/eat', label: 'WhatEat'},
