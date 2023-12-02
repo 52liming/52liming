@@ -148,7 +148,9 @@ const config = {
             html: '<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次（by不蒜子）</span>'
           }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} 李鸣. Built with <a href="https://docusaurus.io/">Docusaurus</a>. Deployed by <a href="https://www.netlify.com/">Netlify</a>.`,
+        copyright: `Copyright © ${new Date().getFullYear()} 李鸣. Built with <a href="https://docusaurus.io/">Docusaurus</a>. 
+        Deployed by <a href='https://app.netlify.com/sites/quiet-centaur-34a719/deploys' target='_blank'><img style="vertical-align: -2px;" src='https://api.netlify.com/api/v1/badges/db886c15-1b26-4247-abbd-9a6c1a1a42c2/deploy-status' /></a>
+        .`,
       },
       prism: {
         theme: lightCodeTheme,
