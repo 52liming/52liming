@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '李鸣',
-  tagline: 'Study・Record・Share    ',
+  tagline: '常疑即见桃花面，甚近来、翻笑无书',
   url: 'https://www.52liming.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -45,7 +45,8 @@ const config = {
           // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
-          // blogSidebarTitle: '随笔',
+          routeBasePath: '/',
+          // blogSidebarTitle: '最近博客',
           showReadingTime: true,
           blogSidebarCount: 'ALL',
           // Please change this to your repo.
@@ -83,11 +84,30 @@ const config = {
         blogSidebarCount: 'ALL',
       } 
     ],
+    [ '@docusaurus/plugin-content-blog',
+      { 
+        id: 'promotion',
+        path: 'promotion',
+        routeBasePath: '/promotion',
+        blogTitle: '推广优惠',
+        blogSidebarTitle: '推广返佣',
+        showReadingTime: false,
+        blogSidebarCount: 'ALL',
+      } 
+    ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        id: 'support_us',
+        content:
+          '👑 <a target="_blank" rel="noopener noreferrer" href="https://cnblogs.vip">加入博客园会员</a> 🥳',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
       docs: {
         sidebar: {
           hideable: true, // 可隐藏的
@@ -101,10 +121,13 @@ const config = {
           src: 'img/logo_32x32.png',
         },
         items: [
-          { to: '/blog', label: '推荐', position: 'right' },
-          { type: 'doc', docId: 'intro', position: 'right', label: '文档', },
-          { to: '/resource', label: '资源', position: 'right',},
-          { href: 'https://52liming.cnblogs.com/', label: '博客', position: 'right' },
+          { type: 'doc', docId: 'intro', label: '笔记', position: 'left'},
+          { to: '/resource', label: '资源', position: 'left'},
+          { to: '/promotion', label: '推广优惠', position: 'left' },
+
+          { href: 'https://melon-partridge-fa1.notion.site/33c342a6afbe44828a7554d3cfc01bf5', label: '网站导航', position: 'left' },
+          { href: 'https://52liming.cnblogs.com/', label: '博客园', position: 'left' },
+          { to: '/about', label: '关于', position: 'right',},
           { type: 'dropdown', label: 'Project', position: 'right',
            items: [
             { to: '/eat', label: 'WhatEat'},

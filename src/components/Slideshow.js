@@ -39,10 +39,6 @@ const Slideshow = () => {
 		return () => clearInterval(interval);
   }, [currentIndex, isPaused]);
 
-  const togglePause = () => {
-    setIsPaused((prevState) => !prevState);
-  };
-
   return (
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
       <img src={images[currentIndex]} alt={`Slideshow ${currentIndex}`} 

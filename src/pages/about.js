@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './index.module.css';
+import styles from './about.module.css';
 import RandomDigest from '../components/RandomDigest';
 import LinkPage from '../components/LinkPage';
 
@@ -29,7 +29,7 @@ function HomePageMain() {
 export default function Home() {
   return (
     <Layout
-      title="首页"
+      title="关于"
       description="李鸣的个人博客">
       <main className='container container--fluid margin-vert--lg'>
         <HomePageMain />
