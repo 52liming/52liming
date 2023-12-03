@@ -1,13 +1,14 @@
 ---
 slug: docs-multi-instance
 title:  多文档实例添加导航
-authors: [xiaoming]
 tags: [docusaurus]
 ---
 
 > 官方文档 https://docusaurus.io/docs/docs-multi-instance
 
 docusaurus 创建后有一个预设的默认文档```docs```，但是如果我们想想添加额外的文档就需要使用到 docusaurus 多文档实例。
+
+<!-- truncate  -->
 
 ## 文件目录
 
