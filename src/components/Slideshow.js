@@ -2,27 +2,27 @@ import React, { useState, useEffect } from "react";
 
 const Slideshow = () => {
   const images = [
-    "/img/eat/1.png",
-    "/img/eat/2.png",
-    "/img/eat/3.png",
-    "/img/eat/4.png",
-    "/img/eat/5.png",
-    "/img/eat/6.png",
-    "/img/eat/7.png",
-    "/img/eat/8.png",
-    "/img/eat/9.png",
-    "/img/eat/10.png",
-    "/img/eat/11.png",
-    "/img/eat/12.png",
-    "/img/eat/13.png",
-    "/img/eat/14.png",
-    "/img/eat/15.png",
-    "/img/eat/16.png",
-    "/img/eat/17.png",
-    "/img/eat/18.png",
-    "/img/eat/19.png",
-    "/img/eat/20.png",
-    "/img/eat/21.png"
+    "/img/eat/1.webp",
+    "/img/eat/2.webp",
+    "/img/eat/3.webp",
+    "/img/eat/4.webp",
+    "/img/eat/5.webp",
+    "/img/eat/6.webp",
+    "/img/eat/7.webp",
+    "/img/eat/8.webp",
+    "/img/eat/9.webp",
+    "/img/eat/10.webp",
+    "/img/eat/11.webp",
+    "/img/eat/12.webp",
+    "/img/eat/13.webp",
+    "/img/eat/14.webp",
+    "/img/eat/15.webp",
+    "/img/eat/16.webp",
+    "/img/eat/17.webp",
+    "/img/eat/18.webp",
+    "/img/eat/19.webp",
+    "/img/eat/20.webp",
+    "/img/eat/21.webp"
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
