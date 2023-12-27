@@ -1,7 +1,7 @@
 ---
 slug: 17852805.html
 title:  DeprecationWarning:on_event is deprecated, use lifespan event handlers instead.
-tags: [fastapi]
+tags: [python,fastapi]
 ---
 
 fastapi 启动之前执行代码，旧版本使用的是```@app.on_event("startup")```，不过在已经不推荐使用
