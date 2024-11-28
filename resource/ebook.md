@@ -2,6 +2,10 @@
 title: 电子书
 ---
 
+## 阿里云藏金阁
+* 一个电子书搜索平台
+https://developer.aliyun.com/ebook
+
 ## 鸠摩搜书
 * 一个电子书搜索平台
 https://www.jiumodiary.com/
